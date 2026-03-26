@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲王：動畫 vs 實體卡規則全解析</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* 表格樣式優化 */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: var(--accent-color);
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        td {
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        tr:hover {
+            background-color: rgba(56, 189, 248, 0.05);
+            transition: 0.3s;
+        }
+
+        .icon-cell {
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .icon {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin: 0 auto 8px;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+        }
+
+        /* 案例卡片樣式 */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .case-card {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .case-card h3 {
+            margin-top: 0;
+            color: #fbbf24;
+            font-size: 1.2rem;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            background: var(--accent-color);
+            color: #000;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            td, th { padding: 10px; font-size: 0.9rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎴 遊戲王動畫卡 vs 實體卡比較</h1>
+    <p class="subtitle">從「口胡」時代到嚴謹連結召喚的規則演進史</p>
+
+    <div class="section">
+        <h2>📊 核心差異概覽</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>維度</th>
+                    <th>動畫 (Anime)</th>
+                    <th>實體卡 (OCG/TCG)</th>
+                </tr>
+                <tr>
+                    <td><strong>效果強度</strong></td>
+                    <td>劇情驅動、數值誇張、甚至有無敵抗性</td>
+                    <td>經過數值平衡，必須符合競技環境</td>
+                </tr>
+                <tr>
+                    <td><strong>規則嚴謹度</strong></td>
+                    <td>模糊、常因劇情需要「口胡」修改</td>
+                    <td>極度嚴謹，擁有複雜的「大師規則」與連鎖機制</td>
+                </tr>
+                <tr>
+                    <td><strong>卡片獲取</strong></td>
+                    <td>存在大量傳說級、僅此一張的唯一卡</td>
+                    <td>標準化發行，劃分禁限卡表以維持環境</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📺 歷代系列規則演進</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>系列</th>
+                        <th>核心機制</th>
+                        <th>動畫規則特色</th>
+                        <th>實體化差距</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="icon-cell">
+                            <img src="怪獸之決鬥.png" alt="DM" class="icon">
+                            <strong>初代 (DM)</strong>
+                        </td>
+                        <td>上級召喚</td>
+                        <td>規則未完善。經典特徵是「屬性相剋」與隨意更改的卡片效果。</td>
+                        <td>❌ 極大。實卡取消了地形相剋與大部分的隨機規則。</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell">
+                            <img src="gx.png" alt="GX" class="icon">
+                            <strong>GX</strong>
+                        </td>
+                        <td>融合召喚</td>
+                        <td>強調英雄與種族特化。動畫中融合素材極其隨意且抽牌卡極多。</td>
+                        <td>⚠️ 較大。實卡對「強欲之壺」等過強抽牌卡進行了嚴格封印。</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell">
+                            <img src="5ds.png" alt="5Ds" class="icon">
+                            <strong>5D's</strong>
+                        </td>
+                        <td>同步召喚</td>
+                        <td>引入「協調怪獸」。動畫中有特殊的「騎乘決鬥」與高速計數器規則。</td>
+                        <td>⭕ 中等。同步召喚成為主流，規則開始與實戰高度掛鉤。</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell">
+                            <img src="zexel.png" alt="ZEXAL" class="icon">
+                            <strong>ZEXAL</strong>
+                        </td>
+                        <td>超量召喚</td>
+                        <td>「疊放」機制。動畫中 No. 怪獸擁有非 No. 無法破壞的霸體設定。</td>
+                        <td>⚠️ 偏大。實卡移除 No. 霸體規則，改以各種抗性代替。</td>
+                    </tr>
+                    <tr>
+                        <td class="icon-cell">
+                            <img src="vrains.png" alt="VRAINS" class="icon">
+                            <strong>VRAINS</strong>
+                        </td>
+                        <td>連結召喚</td>
+                        <td>強調卡片擺放的「位置」與「連結指向」。動畫決鬥極其嚴謹。</td>
+                        <td>✅ 極小。幾乎 1:1 還原實體大師規則 4 的環境。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🔍 經典案例解析</h2>
+        <div class="case-grid">
+            <div class="case-card">
+                <h3><span class="tag">動畫神話</span> 歐西里斯的天空龍</h3>
+                <p><strong>動畫：</strong> 作為神之卡，不受陷阱影響，魔法效果僅持續一回合，且招牌技能「召雷彈」幾乎封殺對手所有召喚。</p>
+                <p><strong>實體：</strong> 雖然保留了召雷彈，但缺乏效力抗性，容易被一張簡單的法術牌破壞，強度大幅平衡。</p>
+            </div>
+            <div class="case-card">
+                <h3><span class="tag">禁忌神力</span> 強欲之壺</h3>
+                <p><strong>動畫：</strong> 幾乎每個主角的牌組都有，隨手一抽就能逆轉劣勢的「劇情道具」。</p>
+                <p><strong>實體：</strong> 因為完全沒有代價就能抽兩張牌，對卡牌遊戲來說太過破壞平衡，長年位居禁卡首位。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="text-align: center;">
+        <h2>🏁 總結</h2>
+        <p>
+            遊戲王動畫的發展史，其實就是一部<strong>從「浪漫劇情」走向「嚴謹競技」</strong>的過程。<br>
+            早期動畫賦予了卡牌靈魂與無限可能，而後期的規則完善則讓這款遊戲成為了全球最受歡迎的交換卡片遊戲 (TCG) 之一。
+        </p>
+    </div>
+
+    <footer>
+        <p>© 2026 決鬥者研究日誌 - 越早期動畫越偏劇情，越後期越接近真實卡牌對戰</p>
+    </footer>
+</div>
+
+</body>
+</html>
